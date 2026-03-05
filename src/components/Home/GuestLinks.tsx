@@ -16,11 +16,7 @@ const _GuestLinks = (props: Props) => {
             <h1>React Typescript Template</h1>
             <p>Please sign in with your Microsoft account.</p>
             <div className="home-button-wrap">
-              <Button
-                type="primary"
-                size="large"
-                onClick={() => props.login()}
-              >
+              <Button type="primary" size="large" onClick={() => props.login()}>
                 {process.env.NODE_ENV === 'development'
                   ? 'Dev Login (Local)'
                   : 'Sign in with Microsoft'}

@@ -11,9 +11,10 @@ const connector = connect(mapStateToProps, mapDispatchToProps);
 interface Props extends ConnectedProps<typeof connector> {}
 
 const _App = (props: Props) => {
+  const { loadUser } = props;
   useEffect(() => {
-    props.loadUser();
-  }, []);
+    loadUser();
+  }, [loadUser]);
   return <Routes />;
 };
 
