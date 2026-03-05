@@ -24,23 +24,13 @@ export const authReducer = (state = initialState, action: ActionRedux) =>
         draft.token = action.payload.id;
         draft.user = action.payload;
         break;
-      case types.LOGIN_SUCCESS:
-      case types.REGISTER_SUCCESS:
-        localStorage.setItem('user', JSON.stringify(action.payload));
-        draft.isAuthenticated = true;
-        draft.loading = false;
-        draft.user = action.payload;
-        break;
       case types.LOGIN_FAILED:
       case types.AUTH_ERROR:
-      case types.REGISTER_FAILED:
-        localStorage.removeItem('user');
         draft.token = null;
         draft.isAuthenticated = false;
         draft.loading = false;
         break;
       case types.LOGOUT:
-        localStorage.removeItem('user');
         draft.token = null;
         draft.isAuthenticated = false;
         draft.loading = false;

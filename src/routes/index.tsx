@@ -18,7 +18,6 @@ const Feature2Page = lazy(() => import('src/pages/StaticPages/Feature2Page'));
 
 // ---> Auth pages
 const LoginPage = lazy(() => import('src/pages/AuthPages/LoginPage'));
-const RegisterPage = lazy(() => import('src/pages/AuthPages/RegisterPage'));
 const ProfilePage = lazy(() => import('src/pages/AuthPages/ProfilePage'));
 
 // ---> Products pages
@@ -67,7 +66,6 @@ export const Routes = () => {
 
               {/* Auth routes */}
               <Route exact path={PATH.LOGIN} component={LoginPage} />
-              <Route exact path={PATH.REGISTER} component={RegisterPage} />
               <PrivateRoute exact path={PATH.PROFILE} component={ProfilePage} />
 
               {/* Products routes */}
